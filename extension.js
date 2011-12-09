@@ -21,7 +21,7 @@ const Util = imports.misc.util;
 const XdgUserAppsPath = (GLib.get_user_data_dir() || GLib.get_home_dir() + '/.local/share') + '/applications';
 
 const AppsPath = GLib.get_home_dir() + '/.local/share/gnome-shell/quicklaunch';
-const AppsPaths = [ GLib.get_home_dir() + '/.local/user/apps', AppsPath ];
+const AppsPaths = [ XdgUserAppsPath, AppsPath ];
 
 /*
  * Gicon Menu Item Object
