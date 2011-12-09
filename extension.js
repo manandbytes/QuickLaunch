@@ -14,6 +14,12 @@ const Lang = imports.lang;
 const FileUtils = imports.misc.fileUtils;
 const Util = imports.misc.util;
 
+/*
+ * http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
+ * http://library.gnome.org/admin/system-admin-guide/stable/menustructure-desktopentry.html.en
+ */
+const XdgUserAppsPath = (GLib.get_user_data_dir() || GLib.get_home_dir() + '/.local/share') + '/applications';
+
 const AppsPath = GLib.get_home_dir() + '/.local/share/gnome-shell/quicklaunch';
 const AppsPaths = [ GLib.get_home_dir() + '/.local/user/apps', AppsPath ];
 
